@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Aulas de yoga para todos os níveis. Encontre a sua força interior com planos a partir de R$ 30 por mês.">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Prana Studio Yoga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap">
+<style>
+:root{
+  --bg:#fff7f0;
+  --surface:#ffffff;
+  --ink:#3a1f1a;
+  --muted:#7a5a50;
+  --line:#f0dccd;
+  --sun:#f2711c;
+  --sun-2:#f9a43a;
+  --ember:#c4441a;
+  --deep:#3a1f1a;
+  --on-deep:#fff4ea;
+  --soft:#fde7d4;
+  --display:"Playfair Display", Georgia, "Times New Roman", serif;
+  --body:"Outfit", "Segoe UI", system-ui, sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1c1210; --surface:#271915; --ink:#fbeee4; --muted:#c9a898; --line:#3d2a24;
+    --sun:#f5833a; --sun-2:#f9a43a; --ember:#ff8a5c; --deep:#120b09; --on-deep:#fff4ea; --soft:#33201a;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1c1210; --surface:#271915; --ink:#fbeee4; --muted:#c9a898; --line:#3d2a24;
+  --sun:#f5833a; --sun-2:#f9a43a; --ember:#ff8a5c; --deep:#120b09; --on-deep:#fff4ea; --soft:#33201a;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;font-weight:300}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;text-wrap:balance;margin:0}
+h2{font-size:clamp(2.1rem,5vw,3.4rem)}
+h2 em,h1 em{font-style:italic;font-weight:400;color:var(--sun)}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--ember)}
+section{padding-block:clamp(64px,10vw,120px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:14px 28px;font:500 .95rem var(--body);cursor:pointer;text-decoration:none;transition:transform .2s, background .2s, box-shadow .2s}
+.btn:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--sun-2);outline-offset:3px}
+.btn-sun{background:var(--sun);color:#fff}
+.btn-sun:hover{background:var(--ember);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.btn-ghost:hover{transform:translateY(-2px)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--deep);color:var(--on-deep)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.logo{font-family:var(--display);font-style:italic;font-size:1.6rem;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo svg{width:28px;height:28px}
+nav.links{display:flex;gap:28px;font-size:.92rem}
+nav.links a{text-decoration:none;opacity:.85}
+nav.links a:hover{opacity:1;color:var(--sun-2)}
+header .btn{padding:10px 20px;font-size:.88rem}
+@media (max-width:820px){nav.links{display:none}}
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 90% at 78% 30%, var(--sun-2) 0%, var(--sun) 38%, var(--ember) 78%, #7a2410 100%);
+  color:#fff;padding-block:clamp(56px,9vw,110px)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(3rem,8.5vw,6.4rem);font-weight:400}
+.hero h1 em{color:#fff6dc;font-weight:600}
+.hero .lede{font-size:clamp(1.05rem,2vw,1.3rem);max-width:34ch;margin-top:22px;font-weight:400}
+.hero .lede b{font-weight:600}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero .btn-sun{background:#fff;color:var(--ember)}
+.hero .btn-sun:hover{background:#fff6dc}
+.hero .meta{display:flex;flex-wrap:wrap;gap:28px;margin-top:44px;font-size:.88rem;opacity:.92}
+.hero .meta strong{display:block;font-family:var(--display);font-size:1.9rem;font-style:italic;font-weight:400;line-height:1}
+.breath{display:grid;place-items:center;gap:20px;text-align:center}
+.orb-stage{position:relative;width:min(340px,100%);aspect-ratio:1;max-width:100%;display:grid;place-items:center}
+.ring{position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(255,255,255,.35)}
+.ring.r2{inset:12%;border-color:rgba(255,255,255,.25)}
+.orb{width:46%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff9e8,#ffd59a 45%,rgba(255,213,154,.2) 75%);box-shadow:0 0 80px 20px rgba(255,236,190,.55);transform:scale(.7);transition:transform 4s cubic-bezier(.45,0,.55,1)}
+.orb.in{transform:scale(1.55)}
+.orb.hold{transform:scale(1.55)}
+.breath-word{font-family:var(--display);font-style:italic;font-size:1.7rem;min-height:2.2rem}
+.breath small{font-size:.82rem;opacity:.85;letter-spacing:.06em}
+.breath .btn{padding:10px 22px;font-size:.88rem;color:#fff}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.orb-stage{width:min(260px,80%)}}
+.ribbon{background:var(--deep);color:var(--on-deep);overflow:hidden;padding-block:16px;white-space:nowrap}
+.ribbon .track{display:inline-flex;gap:42px;animation:slide 38s linear infinite;font-family:var(--display);font-style:italic;font-size:1.35rem}
+.ribbon .track span::after{content:"✺";margin-left:42px;color:var(--sun)}
+@keyframes slide{to{transform:translateX(-50%)}}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;margin-bottom:56px}
+.intro p{color:var(--muted);max-width:52ch}
+@media (max-width:820px){.intro{grid-template-columns:1fr;gap:20px}}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.step{padding:30px 26px 10px 0;border-right:1px solid var(--line);min-width:0}
+.step + .step{padding-left:26px}
+.step:last-child{border-right:0}
+.step .n{font-family:var(--display);font-style:italic;font-size:3.4rem;color:var(--sun);line-height:1}
+.step .sk{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+.step h3{font-size:1.55rem;margin:6px 0 12px}
+.step p{color:var(--muted);font-size:.97rem}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}.step{border-bottom:1px solid var(--line)}.step:nth-child(2){border-right:0}.step:nth-child(3){padding-left:0}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}.step,.step + .step{padding-left:0;border-right:0}}
+.classes{background:var(--soft)}
+.class-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.class{background:var(--surface);border-radius:22px;padding:30px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.class .temp{align-self:flex-start;font-size:.78rem;font-weight:500;padding:5px 12px;border-radius:999px;background:var(--soft);color:var(--ember);font-variant-numeric:tabular-nums}
+.class h3{font-size:1.7rem}
+.class p{color:var(--muted);font-size:.97rem}
+.class .dur{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:.88rem;display:flex;justify-content:space-between;font-variant-numeric:tabular-nums}
+@media (max-width:900px){.class-grid{grid-template-columns:1fr}}
+.plans-head{text-align:center;max-width:640px;margin:0 auto 56px;display:grid;gap:16px}
+.plans-head p{color:var(--muted)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.plan{position:relative;border:1.5px solid var(--line);border-radius:26px;padding:36px 30px;display:flex;flex-direction:column;gap:18px;background:var(--surface);min-width:0}
+.plan.featured{background:var(--deep);color:var(--on-deep);border-color:var(--deep);box-shadow:0 30px 60px -30px rgba(196,68,26,.55)}
+.plan .badge{position:absolute;top:-14px;left:30px;background:var(--sun);color:#fff;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:6px 14px;border-radius:999px}
+.plan .pname{font-family:var(--display);font-style:italic;font-size:1.9rem}
+.plan .for{font-size:.93rem;color:var(--muted);min-height:3em}
+.plan.featured .for,.plan.featured li{color:#e8cfc2}
+.price{display:flex;align-items:baseline;gap:6px;font-variant-numeric:tabular-nums}
+.price .cur{font-size:1.4rem;font-weight:500}
+.price .val{font-family:var(--display);font-size:4.2rem;line-height:1;font-weight:500}
+.price .per{color:var(--muted);font-size:.92rem}
+.plan.featured .per{color:#e8cfc2}
+.plan ul{list-style:none;padding:0;margin:0;display:grid;gap:11px;font-size:.96rem}
+.plan li{display:grid;grid-template-columns:20px 1fr;gap:10px;align-items:start}
+.plan li svg{width:18px;height:18px;margin-top:4px;color:var(--sun)}
+.plan .btn{margin-top:auto;width:100%}
+.plan:not(.featured) .btn{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.plan:not(.featured) .btn:hover{background:var(--ink);color:var(--bg)}
+.plans-note{text-align:center;color:var(--muted);font-size:.9rem;margin-top:30px}
+@media (max-width:900px){.plans{grid-template-columns:1fr;max-width:460px;margin:0 auto}.plan .for{min-height:0}}
+.voices{background:var(--deep);color:var(--on-deep)}
+.voices h2 em{color:var(--sun-2)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:52px}
+.quote{display:flex;flex-direction:column;gap:18px;min-width:0}
+.quote blockquote{margin:0;font-family:var(--display);font-style:italic;font-size:1.35rem;line-height:1.4}
+.quote cite{font-style:normal;font-size:.88rem;color:#d5b5a5}
+.quote cite b{display:block;color:var(--on-deep);font-weight:500}
+@media (max-width:900px){.quotes{grid-template-columns:1fr}}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+@media (max-width:820px){.faq-grid{grid-template-columns:1fr;gap:28px}}
+details{border-bottom:1px solid var(--line);padding-block:20px}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-weight:500;font-size:1.06rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--display);font-size:1.6rem;line-height:1;color:var(--sun);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);margin-top:12px;max-width:60ch}
+.news{background:linear-gradient(120deg,var(--sun),var(--ember));color:#fff;border-radius:32px;padding:clamp(36px,6vw,64px);display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center}
+.news h2{color:#fff}
+.news h2 em{color:#fff6dc}
+.news p{margin-top:14px;opacity:.95;max-width:44ch}
+.news form{display:flex;flex-wrap:wrap;gap:10px}
+.news input{flex:1 1 220px;min-width:0;border:0;border-radius:999px;padding:15px 22px;font:400 1rem var(--body);background:#fff;color:#3a1f1a}
+.news .btn{background:var(--deep);color:#fff}
+.news .ok{flex-basis:100%;font-size:.92rem;min-height:1.4em}
+@media (max-width:820px){.news{grid-template-columns:1fr}}
+.news-sec{padding-top:0}
+footer{border-top:1px solid var(--line);padding-block:40px;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
+footer .logo{color:var(--ink);font-size:1.4rem}
+.modal{position:fixed;inset:0;background:rgba(20,10,8,.6);display:grid;place-items:center;padding:20px;z-index:50}
+.modal-card{background:var(--surface);color:var(--ink);border-radius:24px;padding:34px;max-width:440px;width:100%;display:grid;gap:14px}
+.modal-card h3{font-size:1.8rem}
+.modal-card p{color:var(--muted)}
+.modal-card .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.modal-card .btn-ghost{color:var(--ink)}
+@media (prefers-reduced-motion:reduce){
+  .ribbon .track{animation:none}
+  .orb{transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Prana Studio, início">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="7" fill="#f9a43a"/><g stroke="#f2711c" stroke-width="2" stroke-linecap="round"><path d="M16 2v4M16 26v4M2 16h4M26 16h4M6 6l3 3M23 23l3 3M6 26l3-3M23 9l3-3"/></g></svg>
+      Prana
+    </a>
+    <nav class="links" aria-label="Principal">
+      <a href="#jornada">A jornada</a>
+      <a href="#aulas">Aulas</a>
+      <a href="#planos">Planos</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <a class="btn btn-sun" href="#planos">Começar agora</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow" style="color:#fff6dc">Yoga · Lisboa &amp; online</p>
+        <h1>Encontre a sua <em>força interior</em></h1>
+        <p class="lede">Uma prática que começa na respiração e termina em você. <b>Aulas de yoga para todos os níveis</b>, guiadas por um método em quatro etapas para criar calma, foco e firmeza dentro e fora do tapete.</p>
+        <div class="ctas">
+          <a class="btn btn-sun" href="#planos">Ver planos a partir de R$ 30</a>
+          <a class="btn btn-ghost" href="#jornada">Conhecer o método</a>
+        </div>
+        <div class="meta">
+          <div><strong>32</strong>aulas por semana</div>
+          <div><strong>4</strong>etapas do método</div>
+          <div><strong>1.ª aula</strong>experimental grátis</div>
+        </div>
+      </div>
+
+      <div class="breath" aria-live="polite">
+        <div class="orb-stage">
+          <div class="ring"></div><div class="ring r2"></div>
+          <div class="orb" id="orb"></div>
+        </div>
+        <div class="breath-word" id="breathWord">Respire comigo</div>
+        <small id="breathHint">Ciclo 4 · 4 · 6 &nbsp;— inspire, segure, expire</small>
+        <button class="btn btn-ghost" id="breathBtn" type="button">Iniciar 1 minuto de respiração</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="ribbon" aria-hidden="true">
+    <div class="track">
+      <span>Pranayama</span><span>Asana</span><span>Dharana</span><span>Dhyana</span><span>Sthira sukham asanam</span><span>Respire fundo</span>
+      <span>Pranayama</span><span>Asana</span><span>Dharana</span><span>Dhyana</span><span>Sthira sukham asanam</span><span>Respire fundo</span>
+    </div>
+  </div>
+
+  <section id="jornada">
+    <div class="wrap">
+      <div class="intro">
+        <div>
+          <p class="eyebrow">Como achar sua força interior</p>
+          <h2 style="margin-top:14px">Um caminho em <em>quatro etapas</em></h2>
+        </div>
+        <p>A força interior não aparece de repente. Ela se constrói em camadas, como ensinam os Yoga Sutras de Patañjali: primeiro a respiração acalma o corpo, depois o corpo ganha firmeza, a mente aprende a se concentrar e, por fim, encontra silêncio. Cada aula do Prana percorre esse caminho.</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <div class="n">1</div>
+          <div class="sk">Pranayama</div>
+          <h3>Respirar</h3>
+          <p>Aprenda a controlar o ritmo da respiração. Expirações longas ativam o sistema nervoso parassimpático e baixam a ansiedade em minutos.</p>
+        </article>
+        <article class="step">
+          <div class="n">2</div>
+          <div class="sk">Asana</div>
+          <h3>Firmar</h3>
+          <p>Posturas que unem força e flexibilidade. Sthira sukham asanam: cada postura deve ser firme e confortável ao mesmo tempo.</p>
+        </article>
+        <article class="step">
+          <div class="n">3</div>
+          <div class="sk">Dharana</div>
+          <h3>Concentrar</h3>
+          <p>Treine a atenção num único ponto: a chama de uma vela, um mantra, a respiração. É aqui que a disciplina vira clareza.</p>
+        </article>
+        <article class="step">
+          <div class="n">4</div>
+          <div class="sk">Dhyana</div>
+          <h3>Silenciar</h3>
+          <p>A meditação fecha o ciclo. No silêncio você descobre que a força que procurava já estava presente, só precisava de espaço.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="classes" id="aulas">
+    <div class="wrap">
+      <p class="eyebrow">Aulas</p>
+      <h2 style="margin-top:14px">Escolha a <em>sua prática</em></h2>
+      <div class="class-grid">
+        <article class="class">
+          <span class="temp">Sala a 38 °C</span>
+          <h3>Hot Yoga</h3>
+          <p>Sequência dinâmica numa sala aquecida. Aumenta a flexibilidade, trabalha a resistência e exige presença total. Leve água e uma toalha.</p>
+          <div class="dur"><span>60 min</span><span>Intermediário</span></div>
+        </article>
+        <article class="class">
+          <span class="temp">Sala a 24 °C</span>
+          <h3>Hatha Flow</h3>
+          <p>Posturas clássicas com tempo para alinhar e respirar. A melhor porta de entrada para quem nunca praticou e quer criar base sólida.</p>
+          <div class="dur"><span>75 min</span><span>Todos os níveis</span></div>
+        </article>
+        <article class="class">
+          <span class="temp">Sala a 26 °C</span>
+          <h3>Yin &amp; Meditação</h3>
+          <p>Posturas longas e passivas, de 3 a 5 minutos cada, seguidas de meditação guiada. Ideal ao fim do dia para desacelerar.</p>
+          <div class="dur"><span>60 min</span><span>Todos os níveis</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="planos">
+    <div class="wrap">
+      <div class="plans-head">
+        <p class="eyebrow">Planos mensais</p>
+        <h2>Invista em <em>você</em></h2>
+        <p>Sem fidelização. Cancele ou mude de plano quando quiser. Todos os planos incluem a primeira aula experimental grátis.</p>
+      </div>
+
+      <div class="plans">
+        <article class="plan">
+          <div class="pname">Semente</div>
+          <p class="for">Para dar o primeiro passo e criar o hábito de praticar uma vez por semana.</p>
+          <div class="price"><span class="cur">R$</span><span class="val">30</span><span class="per">/ mês</span></div>
+          <ul>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>4 aulas por mês (1 por semana)</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Hatha Flow e Yin &amp; Meditação</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Biblioteca de meditações guiadas</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Guia digital "Respirar" (etapa 1)</li>
+          </ul>
+          <button class="btn" type="button" data-plan="Semente" data-price="30">Escolher Semente</button>
+        </article>
+
+        <article class="plan featured">
+          <span class="badge">Mais escolhido</span>
+          <div class="pname">Raiz</div>
+          <p class="for">Para quem quer sentir a mudança no corpo e na mente, praticando duas vezes por semana.</p>
+          <div class="price"><span class="cur">R$</span><span class="val">40</span><span class="per">/ mês</span></div>
+          <ul>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>8 aulas por mês (2 por semana)</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Todas as modalidades, incluindo Hot Yoga</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Workshop mensal de pranayama</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Programa completo "Força Interior" (4 etapas)</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Traga um amigo: 1 aula grátis por mês</li>
+          </ul>
+          <button class="btn btn-sun" type="button" data-plan="Raiz" data-price="40">Escolher Raiz</button>
+        </article>
+
+        <article class="plan">
+          <div class="pname">Florescer</div>
+          <p class="for">Para fazer do yoga um estilo de vida, com prática livre e acompanhamento individual.</p>
+          <div class="price"><span class="cur">R$</span><span class="val">50</span><span class="per">/ mês</span></div>
+          <ul>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Aulas ilimitadas, presenciais e online</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Todas as modalidades, incluindo Hot Yoga</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>1 sessão individual de 45 min por mês</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Programa "Força Interior" + diário de prática</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Retiro de fim de semana com 20% de desconto</li>
+          </ul>
+          <button class="btn" type="button" data-plan="Florescer" data-price="50">Escolher Florescer</button>
+        </article>
+      </div>
+      <p class="plans-note">Preços em reais (R$), impostos incluídos. Tapetes, blocos e cintos disponíveis no estúdio sem custo extra.</p>
+    </div>
+  </section>
+
+  <section class="voices">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--sun-2)">Vozes do estúdio</p>
+      <h2 style="margin-top:14px">O que muda <em>por dentro</em></h2>
+      <div class="quotes">
+        <figure class="quote" style="margin:0">
+          <blockquote>"Comecei pelo plano Semente por causa da ansiedade. Três meses depois, a respiração 4‑4‑6 é o que uso antes de cada reunião difícil."</blockquote>
+          <cite><b>Marta R.</b>Plano Semente, desde março</cite>
+        </figure>
+        <figure class="quote" style="margin:0">
+          <blockquote>"O Hot Yoga me ensinou a ficar quando tudo pede para sair. Essa é a força interior de que eles falam."</blockquote>
+          <cite><b>Tiago S.</b>Plano Raiz, desde janeiro</cite>
+        </figure>
+        <figure class="quote" style="margin:0">
+          <blockquote>"As sessões individuais ajustaram a minha prática à lesão no joelho. Hoje pratico cinco vezes por semana sem dor."</blockquote>
+          <cite><b>Inês C.</b>Plano Florescer, desde 2025</cite>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap faq-grid">
+      <div>
+        <p class="eyebrow">Dúvidas</p>
+        <h2 style="margin-top:14px">Antes da <em>primeira aula</em></h2>
+      </div>
+      <div>
+        <details open>
+          <summary>Nunca pratiquei yoga. Posso começar?</summary>
+          <p>Sim. O Hatha Flow foi pensado para iniciantes e os professores oferecem variações para cada postura. Não precisa ser flexível para começar; a flexibilidade vem com a prática.</p>
+        </details>
+        <details>
+          <summary>O que devo levar?</summary>
+          <p>Roupa confortável e uma garrafa de água. Para o Hot Yoga, leve também uma toalha. Tapetes e acessórios estão disponíveis no estúdio.</p>
+        </details>
+        <details>
+          <summary>Posso mudar de plano ou cancelar?</summary>
+          <p>Pode. Os planos são mensais e sem fidelização. A mudança vale a partir do mês seguinte.</p>
+        </details>
+        <details>
+          <summary>As aulas não usadas acumulam?</summary>
+          <p>Nos planos Semente e Raiz, até 2 aulas não usadas passam para o mês seguinte. No Florescer as aulas são ilimitadas.</p>
+        </details>
+        <details>
+          <summary>Hot Yoga é seguro?</summary>
+          <p>Para a maioria das pessoas, sim. Se estiver grávida, tiver problemas cardíacos ou de pressão arterial, fale primeiro com o seu médico e avise o professor antes da aula.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="news-sec">
+    <div class="wrap">
+      <div class="news">
+        <div>
+          <h2>Receba a <em>carta semanal</em></h2>
+          <p>História do yoga, uma prática de respiração por semana e a agenda de workshops do estúdio.</p>
+        </div>
+        <form id="newsForm" novalidate>
+          <label for="email" style="position:absolute;left:-9999px">E-mail</label>
+          <input id="email" name="email" type="email" placeholder="o.seu@email.com" autocomplete="email" required>
+          <button class="btn" type="submit">Quero me inscrever</button>
+          <div class="ok" id="newsMsg" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#inicio">Prana</a>
+    <span>Rua da Prata 120, Lisboa · Seg a Sáb, 7h às 21h</span>
+    <span>@pranastudio</span>
+  </div>
+</footer>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-card">
+    <p class="eyebrow">Plano escolhido</p>
+    <h3 id="modalTitle">Raiz · R$ 40 / mês</h3>
+    <p id="modalText">A sua primeira aula é experimental e gratuita. Depois dela, o plano começa a contar.</p>
+    <div class="row">
+      <button class="btn btn-sun" type="button" id="modalOk">Reservar aula experimental</button>
+      <button class="btn btn-ghost" type="button" id="modalClose">Voltar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var orb=document.getElementById('orb'), word=document.getElementById('breathWord'),
+      btn=document.getElementById('breathBtn'), hint=document.getElementById('breathHint');
+  var timer=null, running=false, endAt=0;
+  var phases=[{t:'Inspire',d:4000,c:'in'},{t:'Segure',d:4000,c:'hold'},{t:'Expire',d:6000,c:''}];
+  function stop(msg){
+    running=false; clearTimeout(timer); orb.className='orb'; orb.style.transitionDuration='';
+    word.textContent=msg||'Respire comigo'; btn.textContent='Iniciar 1 minuto de respiração';
+    hint.textContent='Ciclo 4 · 4 · 6 — inspire, segure, expire';
+  }
+  function run(i){
+    if(!running) return;
+    if(Date.now()>=endAt){ stop('Sinta a sua força'); return; }
+    var p=phases[i%3];
+    orb.style.transitionDuration=(p.d/1000)+'s';
+    orb.className='orb '+p.c;
+    word.textContent=p.t;
+    var left=Math.max(0,Math.ceil((endAt-Date.now())/1000));
+    hint.textContent=left+' s restantes';
+    timer=setTimeout(function(){run(i+1)},p.d);
+  }
+  btn.addEventListener('click',function(){
+    if(running){ stop(); return; }
+    running=true; endAt=Date.now()+56000; btn.textContent='Parar'; run(0);
+  });
+
+  var modal=document.getElementById('modal'), mt=document.getElementById('modalTitle'),
+      mx=document.getElementById('modalText'), ok=document.getElementById('modalOk');
+  document.querySelectorAll('[data-plan]').forEach(function(b){
+    b.addEventListener('click',function(){
+      mt.textContent=b.dataset.plan+' · R$ '+b.dataset.price+' / mês';
+      mx.textContent='A sua primeira aula é experimental e gratuita. Depois dela, o plano começa a contar.';
+      ok.hidden=false;
+      modal.hidden=false; ok.focus();
+    });
+  });
+  function close(){ modal.hidden=true; }
+  document.getElementById('modalClose').addEventListener('click',close);
+  modal.addEventListener('click',function(e){ if(e.target===modal) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+  ok.addEventListener('click',function(){
+    mx.textContent='Pedido registado. A equipa do estúdio entra em contacto para marcar o dia da sua aula experimental.';
+    ok.hidden=true;
+  });
+
+  var form=document.getElementById('newsForm'), msg=document.getElementById('newsMsg'), em=document.getElementById('email');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value.trim())){
+      msg.textContent='Escreva um e-mail válido, por exemplo nome@email.com.'; em.focus(); return;
+    }
+    msg.textContent='Inscrição feita. A primeira carta chega na próxima segunda-feira.';
+    form.reset();
+  });
+})();
+</script>
+
+</body>
+</html>
